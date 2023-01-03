@@ -1,0 +1,113 @@
+/*
+Faça um código que atribua uma string verifique se uma letra digitada é vogal ou consoante.  */
+ 
+Set<String> vogais = new Set<String>{ 
+	'a', 'e', 'i', 'o', 'u' 
+}; 
+Set<String> consoantes = new Set<String>{ 
+	'b', 'c', 'd', 'f', 'g', 'h', 'k', 'j', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'y','x', 'z' 
+};      
+ 
+String letra = 'a'; 
+String min = letra.toLowerCase(); 
+if (vogais.contains(min)) { 
+	System.debug('A letra é vogal'); 
+} 
+ 
+else if (consoantes.contains(min)) { 
+	System.debug('A letra é consoante'); 
+} 
+  
+else {  
+	System.debug('Não é lentra'); 
+} 
+
+/*
+Faça um código que tenha uma variável opção e receba um turno que você estuda atribuindo uma das letras (M-matutino ou V-vespertino ou N-noturno). Imprima a mensagem “Bom dia!”,  “Boa tarde”, “Boa noite”  ou “Valor inválido”, conforme o caso.  */
+ 
+String turno = 'a'; 
+	if(turno == 'M'){ 
+    	System.debug('Bom Dia!'); 
+	}else if(turno == 'V'){ 
+    	System.debug('Boa Tarde!'); 
+	}else if(turno == 'N'){ 
+    	System.debug('Boa Noite!'); 
+	}else{ 
+    	System.debug('Valor Inválido'); 
+	} 
+
+/*
+Faça um código que tenha 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. Dicas:
+
+Três lados formam um triângulo quando a soma de quaisquer dos dois lados é maior que o terceiro.
+Triângulo Equilátero: três lados iguais;
+Triângulo Isósceles: quaisquer dois lados iguais;
+Triângulo Escaleno: três lados diferentes; */
+
+Integer a = 1; 
+Integer b = 7; 
+Integer c = 5; 
+If((a < (b + c)) && (b < (a + c)) && (c < (a + b))){ 
+If((a == b) && (b == c)){ 
+   system.debug('Triangulo Equilátero'); 
+	} 
+	Else IF((a == b) || (b == c) || (a == c)){ 
+	system.debug('Triangulo Isósceles'); 
+}Else{ 
+   system.debug('Triangulo Escaleno'); 
+}}Else{ 
+   system.debug('Não é possível formar um triangulo'); 
+} 
+
+/*
+Faça um programa que verifique e mostre os números entre 1.000 e 2.000 (inclusive) que, quando divididos por 11 produzam resto igual a 2. (Math.mod in Apex)(loop)*/
+
+List<Integer> numeros = new List<Integer>(); 
+ 
+for (Integer cont = 1000; cont <= 2000; cont++ ) { 
+	Integer r = math.mod(cont, 2); 
+	if (r == 0 ) { 
+numeros.add(cont); 
+    	System.debug(cont); 
+} 
+} 
+
+
+
+/*
+Baseado nos conceitos vistos, monte uma classe, chamada Computador e faça as estruturas de acordo com o que se pede:
+a classe não possui atributos.
+criar um método void chamado ligar()
+imprimir seu PC está ligado
+criar um método void  chamado hibernar()
+imprimir seu PC está hibernando
+criar um método void chamado desligar()
+imprimir seu PC está desligado
+
+	Depois de estruturar a classe, crie um objeto de teste que use cada uma das funções.*/
+
+public class Computador { 
+	String ligar = 'Seu Pc está ligado'; 
+	String hibernar = 'Seu PC está Hibernando'; 
+	String desligar = 'Seu pc está desligando'; 
+	public void imprimirligar(){ 
+   	System.debug(ligar); 
+	} 
+	public void imprimirhibernar(){ 
+    	System.debug(hibernar); 
+	} 
+	public void imprimirdesligar(){ 
+    	System.debug(desligar); 
+	} 
+} 
+__________________________________ 
+Computador obj = new Computador(); 
+obj.imprimirligar(); 
+ 
+Computador obj1 = new Computador(); 
+ 
+obj1.imprimirhibernar(); 
+ 
+Computador obj2 = new Computador(); 
+ 
+obj2.imprimirdesligar(); 
